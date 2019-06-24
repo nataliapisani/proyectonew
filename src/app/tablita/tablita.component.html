@@ -19,7 +19,7 @@
 </p-table> -->
 
 <h3>INFORMACIÓN DE IMPORTANCIA</h3>
-<p-table [columns]="cols" [value]="cars">
+<p-table [columns]="cols" [value]="cars" [paginator]="true" >
     <ng-template pTemplate="header" let-columns>
         <tr>
             <th *ngFor="let col of columns">
@@ -30,7 +30,7 @@
             </th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <ng-template pTemplate="body" let-rowData let-columns="columns" >
         <tr >
             <td *ngFor="let col of columns">
                     {{rowData[col.field]}}
