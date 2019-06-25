@@ -15,6 +15,15 @@ import { LinkeoComponent } from './linkeo/linkeo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { TodalainfoComponent } from './todalainfo/todalainfo.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import {SliderModule} from 'primeng/slider';
+import {DropdownModule} from 'primeng/dropdown';
+import {MultiSelectModule} from 'primeng/multiselect';
+import {PanelModule} from 'primeng/panel';
+import {TabViewModule} from 'primeng/tabview';
+
+
 
 @NgModule({
   declarations: [
@@ -26,9 +35,12 @@ import { TodalainfoComponent } from './todalainfo/todalainfo.component';
     TablitaComponent,
     LinkeoComponent,
     TodalainfoComponent,
-    
+  
   ],
   imports: [
+    
+    CommonModule,
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
@@ -36,6 +48,11 @@ import { TodalainfoComponent } from './todalainfo/todalainfo.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
+    SliderModule,
+    DropdownModule,
+    MultiSelectModule,
+    PanelModule,
+    TabViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
