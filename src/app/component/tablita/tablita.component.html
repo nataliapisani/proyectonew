@@ -68,6 +68,9 @@
                 <th *ngFor="let col of columns">
                     {{col.header}}
                 </th>
+                <th>
+                    Detalles
+                </th>
             </tr>
             <tr>
                 <th *ngFor="let col of columns" [ngSwitch]="col.field">
@@ -80,12 +83,16 @@
                     <p-dropdown *ngSwitchCase="'brand'" [options]="brands" [style]="{'width':'100%'}" (onChange)="dt.filter($event.value, col.field, 'equals')"></p-dropdown>
                     <p-multiSelect *ngSwitchCase="'color'" [options]="colors" defaultLabel="All Colors" (onChange)="dt.filter($event.value, col.field, 'in')"></p-multiSelect>
                 </th>
+                <TH></TH>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-rowData let-columns="columns">
             <tr [pSelectableRow]="rowData">
                 <td *ngFor="let col of columns">
                     {{rowData[col.field]}}
+                </td>
+                <td>
+                    <button  pButton icon="pi pi-search" (click)="enviar()"></button>
                 </td>
             </tr>
         </ng-template>

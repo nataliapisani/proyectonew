@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, ActivatedRoute } from '@angular/router';
-import { Car } from '../models/car.model';
-import { CarService } from '../car.service';
+import { Car } from '../../models/car.model';
+import { CarService } from '../../service/car.service';
 
 @Component({
   selector: 'app-linkeo',

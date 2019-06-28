@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Car } from '../component/components/domain/car';
-import { CarService } from '../service/car.service';
-import { SelectItem } from '../component/components/common/api';
+import { Car } from '../components/domain/car';
+import { CarService } from '../../service/car.service';
+import { SelectItem } from '../components/common/api';
 
 @Component({
   selector: 'app-tablita',
   templateUrl: './tablita.component.html',
   styleUrls: ['./tablita.component.css']
 })
+
 
 export class TablitaComponent implements OnInit {
 
